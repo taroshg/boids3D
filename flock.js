@@ -4,7 +4,7 @@ class Flock
     {
         this.boids = []
         this.visualRange = 100
-        this.protectedRange = 30
+        this.protectedRange = 20
         
         this.alignmentFactor = 0.1
         this.cohesionFactor = 0.01

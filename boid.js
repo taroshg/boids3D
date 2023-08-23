@@ -5,7 +5,7 @@ class Boid
         this.pos = createVector(x, y, z);
         this.vel = p5.Vector.random3D();
         this.r = 10
-        this.minspeed = 4
+        this.minspeed = 3
         this.maxspeed = 5
         this.turnFactor = 1
     }
@@ -35,7 +35,7 @@ class Boid
         let ang = p5.Vector.angleBetween(this.vel, createVector(0, 1, 0));
         push()
         translate(this.pos)
-        fill(255, 140, 0)
+        fill(255, 140, 0, this.vel.mag() * 50)
         strokeWeight(0)
         rotate(ang > 0 ? -ang : ang, dir)
         cone(this.r, this.r * 2)
